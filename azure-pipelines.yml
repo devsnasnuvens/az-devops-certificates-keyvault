@@ -88,7 +88,6 @@ steps:
       -var="certificate_password=$(CERTIFICATE_PASSWORD)" \
       -var="certificate_path=$(certificate_secure_file.secureFilePath)" 
 
-# Optional task to delete the secure file from the deployment agent
 - task: DeleteFiles@1
   inputs: 
     Contents: $(certificate_secure_file.secureFilePath)
